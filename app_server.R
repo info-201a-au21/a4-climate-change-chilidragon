@@ -21,7 +21,8 @@ server <- function(input, output){
     plot <- ggplot(data = climate_data) +
       geom_line(mapping = aes(x=year, y= !!as.name(input$y_axis_input), 
                               color= country))+
-      labs(x="Year", y= gsub("[[:punct:]]", " ", input$y_axis_input)) +
+      labs(x="Year", y= paste(gsub("[[:punct:]]", " ", 
+                                   input$y_axis_input), 'Amount')) +
       guides(fill=guide_legend(title="Country"))
   
     co_plot <- ggplotly(plot)
