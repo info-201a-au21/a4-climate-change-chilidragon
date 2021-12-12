@@ -4,7 +4,7 @@ library("plotly")
 library("dplyr")
 library("tidyverse")
 
-climate_data <- read.csv('https://github.com/info-201a-au21/a4-climate-change-chilidragon/blob/831940a6e11ced7ba898016ec6b836aa63fd9d82/owid-co2-data.csv', stringsAsFactors = FALSE)
+climate_data <- read.csv('https://raw.githubusercontent.com/info-201a-au21/a4-climate-change-chilidragon/main/owid-co2-data.csv?token=AV6PPAZSX72XGMIAAP33QH3BX3RWK', stringsAsFactors = FALSE)
 
 climate_data<- climate_data %>%
   filter(country %in% c(
